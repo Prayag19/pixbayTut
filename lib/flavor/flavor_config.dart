@@ -30,7 +30,7 @@ class FlavorConfig {
       case Flavor.DEV:
         return "Dev";
       case Flavor.LIVE:
-        return "Live";
+        return "Pixabay Demo";
       default:
         return "";
     }
