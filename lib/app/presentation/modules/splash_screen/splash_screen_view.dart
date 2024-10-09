@@ -23,7 +23,7 @@ class SplashScreenPageView extends GetView {
                 style: TextStyle(color: Colors.white),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(20.0),
                 child: SizedBox(
                   height:50,
                   width: 50,

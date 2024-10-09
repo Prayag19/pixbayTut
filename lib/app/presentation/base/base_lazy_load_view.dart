@@ -40,7 +40,7 @@ class BaseLazyLoadView extends StatelessWidget {
           return Container(
             height: Responsive.heightPer(90),
             child: const Center(
-              child: Text("No Records"),
+              child: Text("No Records", style: TextStyle(color: Colors.white),),
             ),
           );
         }
@@ -49,7 +49,7 @@ class BaseLazyLoadView extends StatelessWidget {
             return buildIndexItem(buildList[index]);
           } else {
             return const Center(
-              child: Text("No Records"),
+              child: Text("No Records", style: TextStyle(color: Colors.white),),
             );
           }
         } else {
@@ -68,10 +68,10 @@ class BaseLazyLoadView extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: Text(
-                  "End of Results",
+                  "End of Results", style: TextStyle(color: Colors.white),),
 
                 ),
-              ),
+
             );
           } else {
             return Container();

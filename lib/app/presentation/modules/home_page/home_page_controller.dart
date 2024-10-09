@@ -29,7 +29,7 @@ class HomeViewPageController extends BaseAppController {
     });
 
     scrollerController.value.addListener(() {
-      if (scrollerController.value.position.pixels ==
+      if ((scrollerController.value.position.pixels) ==
               scrollerController.value.position.maxScrollExtent &&
           currentPage.value < totalPage.value) {
         currentPage.value = currentPage.value + 1;
