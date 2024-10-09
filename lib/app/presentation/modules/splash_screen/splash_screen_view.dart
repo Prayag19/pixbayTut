@@ -22,12 +22,16 @@ class SplashScreenPageView extends GetView {
               textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white),
               ),
-              SizedBox(
-                height: Responsive.heightPer(20),
-                child: CircularProgressIndicator(
-                  color: AppColor.lightNavyBlue,
-                  strokeWidth:10,
-                )
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  height:50,
+                  width: 50,
+                  child: CircularProgressIndicator(
+                    color: AppColor.lightNavyBlue,
+                    strokeWidth:10,
+                  )
+                ),
               )
             ],
           ),
