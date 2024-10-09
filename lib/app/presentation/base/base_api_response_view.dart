@@ -32,16 +32,14 @@ class ApiResponseViewObserver<T> extends StatelessWidget {
     }
     if (apiResponse.apiStatus == ApiStatus.loading) {
       if (onLoadingWidget == null) {
-        return Column(
+        return const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: Container(
-                child: SizedBox(
-                  width: 100,
-                  height: 100,
-                  child:CircularProgressIndicator())
-              ),
+              child: SizedBox(
+                width: 100,
+                height: 100,
+                child:CircularProgressIndicator()),
             ),
           ],
         );
@@ -57,7 +55,7 @@ class ApiResponseViewObserver<T> extends StatelessWidget {
             children: [
               Center(
                   child: Text(
-                apiResponse.message ?? "Error",
+                apiResponse.message ?? Strings.instance.errorError,
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
@@ -66,9 +64,9 @@ class ApiResponseViewObserver<T> extends StatelessWidget {
                   onPressed: () {
                     retryFunction?.call();
                   },
-                  child: const Text(
-                    "Retry",
-                    style: TextStyle(
+                  child:  Text(
+                    Strings.instance.errorRetry,
+                    style: const TextStyle(
                       color: AppColor.lightBlue,
                     ),
                   )):SizedBox()
@@ -103,7 +101,7 @@ class ApiResponseViewObserver<T> extends StatelessWidget {
     }
     if (apiResponse.apiStatus == ApiStatus.idle) {
       if (onIdleData == null) {
-        return Center(child: Text(""));
+        return const Center(child: Text(""));
       } else {
         return Center(
             child: Text(

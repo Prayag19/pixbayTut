@@ -1,7 +1,3 @@
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
-import '../../../flavor/flavor_config.dart';
 import '../../data/model/network_models/api_response.dart';
 import '../../data/repository/picture_repository.dart';
 import '../../ui/constant/strings.dart';

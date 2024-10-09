@@ -11,33 +11,32 @@ class SplashScreenPageView extends GetView {
   @override
   Widget build(BuildContext context) {
     return BaseView(
-      onViewCreated: (context, orientation, constrains){
+      onViewCreated: (context, orientation, constrains) {
         return Container(
           width: Responsive.widthPer(100),
           color: Colors.black,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("This is task demo by prayagbhoir19@gmail.com",
-              textAlign: TextAlign.center,
+              Text(
+                "This is task demo by prayagbhoir19@gmail.com",
+                textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white),
               ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: SizedBox(
-                  height:50,
-                  width: 50,
-                  child: CircularProgressIndicator(
-                    color: AppColor.lightNavyBlue,
-                    strokeWidth:10,
-                  )
-                ),
+                    height: 50,
+                    width: 50,
+                    child: CircularProgressIndicator(
+                      color: AppColor.lightNavyBlue,
+                      strokeWidth: 10,
+                    )),
               )
             ],
           ),
         );
       },
-
     );
   }
 }

@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter/material.dart';
+import '../../ui/constant/strings.dart';
 
 
 class BaseAppController extends GetxController {
@@ -21,22 +20,21 @@ class BaseAppController extends GetxController {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Container(
-                child: SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: CircularProgressIndicator()
-              )),
-              SizedBox(
+              const SizedBox(
+                width: 100,
+                height: 100,
+                child: CircularProgressIndicator()
+                            ),
+              const SizedBox(
                 height: 10,
               ),
-              Text(msg ?? "Loading"),
-              SizedBox(
+              Text(msg ?? Strings.instance.textLoading),
+              const SizedBox(
                 height: 10,
               ),
               percent!=null? Obx(() {
                 return Text(percent.value);
-              }):SizedBox()
+              }):const SizedBox()
             ],
           ),
         ),

@@ -3,7 +3,6 @@ import 'package:dio/dio.dart' as dio;
 import '../../model/network_models/api_response.dart';
 import '../../model/network_models/request_model.dart';
 import 'base_api.dart';
-import 'package:http_parser/http_parser.dart';
 
 class ApiCaller extends GetxService with BaseApiClass {
   late dio.Dio _httpClient;

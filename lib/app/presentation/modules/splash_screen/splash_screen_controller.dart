@@ -9,7 +9,7 @@ class SplashScreenPageController extends GetxController {
   }
 
   Future<void> gotoPreLoginPage() async {
-   await Future.delayed(Duration(milliseconds: 800));
-   Get.offAllNamed(Routes.homeView);
+    await Future.delayed(Duration(milliseconds: 800));
+    Get.offAllNamed(Routes.homeView);
   }
 }

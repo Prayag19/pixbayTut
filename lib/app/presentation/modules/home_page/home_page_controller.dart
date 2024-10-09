@@ -79,7 +79,6 @@ class HomeViewPageController extends BaseAppController {
     } else {
       itemPerPage.value = 20;
     }
-
     getPictures(true);
   }
 }
