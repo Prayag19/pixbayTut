@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:pixbaydemo/app/ui/widgets/picture_view.dart';
 
@@ -79,14 +80,19 @@ class PictureContainer extends StatelessWidget {
 
   void openInFullScreen(context, PictureDto pictureDto) {
     showDialog(context: context, builder: (context){
-      return Dialog(
+      return   Dialog(
+        backgroundColor: Colors.black87,
         insetPadding: EdgeInsets.zero,
         child: SizedBox(
           height: Responsive.heightPer(100),
           width: Responsive.widthPer(100),
           child:Stack(
             children: [
-              Positioned.fill(child: PictureView(picture: picture, showFullSizeImage: true,)),
+              Positioned.fill(
+                child: InteractiveViewer(
+                child: PictureView(picture: picture, showFullSizeImage: true,).animate().scale(duration: const Duration(milliseconds: 250)),
+              ),
+              ),
               Positioned(
                 right: Responsive.widthPer(5),
                   top:Responsive.heightPer(5) ,

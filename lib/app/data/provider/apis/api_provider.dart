@@ -17,8 +17,6 @@ class ApiCaller extends GetxService with BaseApiClass {
 
   initialised() {}
 
-
-
   getRequestData(BaseRequest data) async {
     return await onRequest(
         url: data.getRequestUrl(),
@@ -29,8 +27,4 @@ class ApiCaller extends GetxService with BaseApiClass {
               apiStatus: ApiStatus.success, data: response.data, message: "");
         });
   }
-
-
-
-
 }

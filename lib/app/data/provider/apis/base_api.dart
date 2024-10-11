@@ -57,7 +57,6 @@ mixin BaseApiClass {
     if (e.response?.statusCode == 422) {
       return ApiResponse(
           apiStatus: ApiStatus.error, message: "Invalid Request (422)");
-      // Get.find<AuthService>().removeCurrentUser(false);
     }
 
     if (e.response!.data != null && e.response!.data.toString()[0] != "<") {
